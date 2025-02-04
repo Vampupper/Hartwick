@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartwick.me - Ben Hartwick</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            text-align: center;
+        }
+        nav {
+            margin: 20px;
+        }
+        nav a {
+            color: #7D0DC3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #7D0DC3;
+            font-family: 'Bebas Neue', cursive;
+            text-align: center;
+            font-size: 36px;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .bio {
+            margin-top: 30px;
+            font-size: 28px;
+            text-align: center;
+        }
+        .contact {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #7D0DC3;
+            color: white;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .contact input, .contact textarea, .contact button {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        .contact button {
+            background-color: white;
+            color: #7D0DC3;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+    <div class="container">
+        <img src="logo.png" alt="Ben Hartwick Logo" class="logo">
+        <h1>Welcome to Hartwick.me</h1>
+        <p>Hi, I'm Ben Hartwick. This is my personal website where you can find information about my projects, background, and resume.</p>
+        <div class="bio">
+            <h2>About Me</h2>
+            <p>By day, I'm a master of audiovisual wizardry, taming unruly tech and orchestrating seamless events. By night, I meticulously plot world domination (or at least a solid meal plan for the week). Whether managing festivals for thousands, fixing things that definitely weren’t my fault, or debating the superiority of various coffee brewing methods, I bring passion and an unhealthy love for gadgets to everything I do.</p>
+            <p>If you need a problem solved, a festival managed, or just someone to explain why your HDMI cable isn’t working (hint: it’s always the HDMI cable), I’m your guy.</p>
+        </div>
+        <div class="contact">
+            <h2 style="color: white;">Contact Me</h2>
+            <form action="mailto:ben@hartwick.me" method="post" enctype="text/plain" onsubmit="return validateTurnstile();">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAAA7a75UXybkRae5E"></div>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+                <script>
+        function validateTurnstile() {
+            const turnstileResponse = document.querySelector('textarea[name="cf-turnstile-response"]');
+            if (!turnstileResponse || !turnstileResponse.value) {
+                alert('Please complete the CAPTCHA to proceed.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</form>
+        </div>
+    </div>
+</body>
+</html>
