@@ -1,0 +1,74 @@
+/* General styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+nav {
+    margin: 20px;
+}
+nav a {
+    color: #7D0DC3;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header styles */
+h1, h2 {
+    color: #7D0DC3;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Logo */
+.logo {
+    margin-top: 20px;
+}
+
+/* Bio section */
+.bio {
+    margin-top: 30px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Contact form */
+.contact {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #7D0DC3;
+    color: white;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.contact input, .contact textarea, .contact button {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.contact button {
+    background-color: white;
+    color: #7D0DC3;
+    border: none;
+    cursor: pointer;
+}
